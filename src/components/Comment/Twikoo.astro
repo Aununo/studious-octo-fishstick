@@ -1,0 +1,91 @@
+---
+import twikooCSS from 'twikoo/dist/twikoo.css?url'
+import twikooPath from 'twikoo/dist/twikoo.nocss.js?url' // Using twikoo.min.js causes CSS loading failure after View Transitions
+import { allLocales, base, defaultLocale, themeConfig } from '@/config'
+import { twikooLocaleMap } from '@/i18n/config'
+
+const { envId = '' } = themeConfig.comment?.twikoo ?? {}
+---
+
+<!-- Class not working for twikoo div -->
+<div class="no-heti mt-16">
+  <div id="twikoo" />
+</div>
+
+<!-- Twikoo Script >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<script
+  is:inline
+  src={twikooPath}
+></script>
+
+<script
+  is:inline
+  define:vars={{
+    allLocales,
+    base,
+    defaultLocale,
+    envId,
+    twikooLocaleMap,
+    twikooCSS,
+  }}
+>
+let twikooObserver = null
+
+function setupTwikoo() {
+  const currentPath = window.location.pathname
+  const twikooPath = currentPath.replace(
+    new RegExp(`\\/(${allLocales.join('|')})\\/`),
+    '/',
+  )
+
+  const pathWithoutBase = base && currentPath.startsWith(base)
+    ? currentPath.slice(base.length)
+    : currentPath
+
+  const lang = Object.keys(twikooLocaleMap).find(code =>
+    pathWithoutBase.startsWith(`/${code}/`),
+  ) ?? defaultLocale
+
+  twikoo.init({
+    envId,
+    el: '#twikoo',
+    // region: 'ap-shanghai', // Specify for Tencent Cloud, omit for Vercel
+    path: twikooPath, // Share comments in different languages
+    lang: twikooLocaleMap[lang],
+  })
+}
+
+function cleanupTwikooObserver() {
+  twikooObserver?.disconnect()
+  twikooObserver = null
+}
+
+// Create an intersection observer to lazy load Twikoo when the container enters viewport
+function lazySetupTwikoo() {
+  // Cleanup Twikoo observer if exists
+  cleanupTwikooObserver()
+
+  const twikooContainer = document.getElementById('twikoo')
+  if (!twikooContainer) {
+    return
+  }
+
+  const link = document.createElement('link')
+  link.rel = 'stylesheet'
+  link.href = twikooCSS
+  document.head.appendChild(link)
+
+  twikooObserver = new IntersectionObserver((entries) => {
+    if (entries.some(entry => entry.isIntersecting)) {
+      setupTwikoo()
+      twikooObserver?.disconnect()
+    }
+  }, { rootMargin: '500px' })
+
+  twikooObserver.observe(twikooContainer)
+}
+
+document.addEventListener('astro:page-load', lazySetupTwikoo)
+document.addEventListener('astro:before-swap', cleanupTwikooObserver)
+lazySetupTwikoo()
+</script>

@@ -1,0 +1,98 @@
+---
+import { base, defaultLocale, themeConfig } from '@/config'
+import { giscusLocaleMap } from '@/i18n/config'
+
+const {
+  repo = '',
+  repoId = '',
+  category = '',
+  categoryId = '',
+  mapping = 'pathname',
+  strict = '0',
+  reactionsEnabled = '1',
+  emitMetadata = '0',
+  inputPosition = 'bottom',
+} = themeConfig.comment?.giscus ?? {}
+---
+
+<div id="giscus" class="giscus mt-16" />
+
+<!-- Giscus Script >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+<script
+  is:inline
+  define:vars={{
+    base,
+    defaultLocale,
+    repo,
+    repoId,
+    category,
+    categoryId,
+    mapping,
+    strict,
+    reactionsEnabled,
+    emitMetadata,
+    inputPosition,
+    giscusLocaleMap,
+  }}
+>
+function getThemeUrl() {
+  const isDark = document.documentElement.classList.contains('dark')
+  const origin = window.location.origin
+
+  return isDark
+    ? `${origin}${base}/giscus/theme-dark.css`
+    : `${origin}${base}/giscus/theme-light.css`
+}
+
+function setupGiscus() {
+  const giscusContainer = document.getElementById('giscus')
+  giscusContainer.innerHTML = ''
+
+  const currentPath = window.location.pathname
+  const pathWithoutBase = base && currentPath.startsWith(base)
+    ? currentPath.slice(base.length)
+    : currentPath
+
+  const lang = Object.keys(giscusLocaleMap).find(code =>
+    pathWithoutBase.startsWith(`/${code}/`),
+  ) ?? defaultLocale
+
+  const dataAttributes = {
+    repo,
+    repoId,
+    ...(category && { category }),
+    categoryId,
+    mapping,
+    strict,
+    reactionsEnabled,
+    emitMetadata,
+    inputPosition,
+    theme: getThemeUrl(),
+    lang: giscusLocaleMap[lang],
+  }
+
+  const script = document.createElement('script')
+  script.crossOrigin = 'anonymous'
+  script.async = true
+  Object.assign(script.dataset, dataAttributes)
+  script.src = 'https://giscus.app/client.js'
+
+  giscusContainer.appendChild(script)
+}
+
+function updateGiscusTheme() {
+  const iframe = document.querySelector('.giscus-frame')
+  if (!iframe || !iframe.contentWindow) {
+    return
+  }
+
+  iframe.contentWindow.postMessage(
+    { giscus: { setConfig: { theme: getThemeUrl() } } },
+    'https://giscus.app',
+  )
+}
+
+document.addEventListener('astro:page-load', setupGiscus)
+document.addEventListener('theme-changed', updateGiscusTheme)
+setupGiscus()
+</script>
