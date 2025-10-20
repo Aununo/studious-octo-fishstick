@@ -5,6 +5,7 @@ tags:
   - 胡适
   - 近代文学
 lang: zh
+description: 没有容忍，就没有自由？
 abbrlink: tolerance-freedom
 ---
 

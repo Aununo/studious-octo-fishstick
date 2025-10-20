@@ -1,7 +1,7 @@
 ---
 title: 随笔
 published: 2025-10-20T12:42:01.725Z
-description: ''
+description: '一些琐碎的想法'
 updated: ''
 tags:
   - Tag
@@ -33,3 +33,9 @@ abbrlink: 'notes'
 ## 其他
 
 "每当你想批评别人的时候，要记住，这世上并不是所有人，都有你拥有的那些优势。"   ——wsy
+
+> 在我的后园，可以看见墙外有两株树，一株是枣树，还有一株也是枣树。
+>
+> —— <cite>《秋夜》[^1]</cite>
+
+[^1]: 《[秋夜](https://zh.wikisource.org/wiki/%E7%A7%8B%E5%A4%9C_(%E9%AD%AF%E8%BF%85))》是鲁迅散文诗集《野草》中的第一首散文诗，创作于 1924 年。

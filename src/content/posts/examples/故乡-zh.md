@@ -5,10 +5,9 @@ tags:
   - 鲁迅
   - 近代文学
 lang: zh
+description: '他站住了，脸上现出欢喜和凄凉的神情；动着嘴唇，却没有作声。他的态度终于恭敬起来了，分明的叫道：老爷！'
 abbrlink: guxiang
 ---
-
-![_Here's the description of the picture](../_images/03.webp)
 
 我冒了严寒，回到相隔二千馀里，别了二十馀年的故乡去。
 

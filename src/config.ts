@@ -4,9 +4,9 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Hello :)',
+    title: 'Blog',
     // site subtitle
-    subtitle: 'Welcome to Aununo\'s blog!',
+    subtitle: 'Trust is divine.',
     // site description
     description: '',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
