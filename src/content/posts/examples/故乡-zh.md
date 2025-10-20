@@ -5,10 +5,10 @@ tags:
   - 鲁迅
   - 近代文学
 lang: zh
-abbrlink: my-native-heath
+abbrlink: guxiang
 ---
 
-![_Here's the description of the picture](https://image.radishzz.cc/picsmaller/03.webp)
+![_Here's the description of the picture](../_images/03.webp)
 
 我冒了严寒，回到相隔二千馀里，别了二十馀年的故乡去。
 
