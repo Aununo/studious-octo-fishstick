@@ -1,8 +1,13 @@
 ---
 title: When you flow, life follows.
 published: 2025-08-24
+description: ''
+updated: ''
 tags:
   - Sana Rizvi
+draft: false
+pin: 0
+toc: true
 lang: en
 abbrlink: flow-follow
 ---
