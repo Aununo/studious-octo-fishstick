@@ -6,9 +6,7 @@ Runzhuo Gan, male, resides in Chengdu.
 
 He has no plans for marriage or children and maintains a stable relationship with his gf.
 
-He was born on June 18, 2005.
-
-Hometown is in China.
+He was born in 2005.
 
 Going downstairs to get a PCR test is his favorite.
 

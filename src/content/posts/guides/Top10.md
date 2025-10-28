@@ -1,6 +1,6 @@
 ---
 title: Top10
-published: 2025-10-23T03:28:46.070Z
+published: 2025-10-11T03:28:46.070Z
 description: '你有心目中最伟大的发明 Top10 吗？她问。'
 updated: ''
 tags:
@@ -30,7 +30,7 @@ abbrlink: ''
 
 她笑，“好新奇的角度。”
 
-![My honey and I](../_images/wj.jpg)
+![My honey and I](../_images/shenshen/wj.jpg)
 
 “Top9呢？”
 

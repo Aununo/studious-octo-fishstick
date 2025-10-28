@@ -4,7 +4,7 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Blog',
+    title: 'Home',
     // site subtitle
     subtitle: 'Trust is divine.',
     // site description
@@ -12,9 +12,9 @@ export const themeConfig: ThemeConfig = {
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: false, // true, false
     // author name
-    author: 'Aununo',
+    author: '',
     // site url
-    url: 'https://www.aununo.xyz',
+    url: 'https://blog.aununo.xyz',
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
