@@ -28,11 +28,11 @@ abbrlink: 'dnn'
 | S4 |all labels and their probability scores |
 | S5 |the raw output of the DNN|
 
-# Chen et al., Asiacrypt 2024 (Xiaoyun Wang)
+# Chen et al., Asiacrypt 2024 (Xiaoyun Wang)[^1]
 
 这是**第一篇**尝试在“硬标签”设置下实现“功能等效提取”的攻击论文。这次攻击的计算复杂度是指数级的。因此，它不具备实际应用的效率，只能在非常小的（例如最多4个神经元）、仅限二元分类器的微型网络上得到验证。
 
-# Carlini et al., Eurocrypt 2025 (best paper)
+# Carlini et al., Eurocrypt 2025 (best paper)[^2]
 
 这是该领域的**重大突破**。它首次提出了一种在“硬标签”设置下，查询数和计算时间均为多项式级的攻击方法。解决了 Chen et al. 2024 留下的指数级时间复杂度的瓶颈。
 
@@ -106,10 +106,16 @@ $$
 
 对每一个神经元的对偶点聚类，多次选取对偶点进行独立的行走-测量实验，通过投票进行对符号的判断。
 
-# Canales-Martínez et al.
+# Canales-Martínez et al.[^3]
 
 这篇论文是上一篇的直接后续工作。
 
 本文提出了一种新方法。该方法通过寻找“过渡点”（即两个类别的原始输出值相等的点），构建一个线性方程组，从而解出输出层的参数。
 
 本文还为特定类型的网络层（收缩层，即神经元数量减少的层）提供了更高效的符号恢复技术（硬标签版本的 "freeze" 和 "SOE" 方法）。
+
+[^1]: [Hard-Label Cryptanalytic Extraction of Neural Network Models](https://eprint.iacr.org/2024/1403)
+
+[^2]: [Polynomial Time Cryptanalytic Extraction of Deep Neural Networks in the Hard-Label Setting](https://eprint.iacr.org/2024/1580)
+
+[^3]: [Extracting Some Layers of Deep Neural Networks in the Hard-Label Setting](https://eprint.iacr.org/2025/1118)
