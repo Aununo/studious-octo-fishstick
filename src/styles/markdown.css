@@ -74,6 +74,40 @@
   --at-apply: 'mb-4';
 }
 
+/* Image Size Control Classes */
+.heti figure.img-xs img {
+  --at-apply: 'max-w-25%';
+}
+.heti figure.img-sm img {
+  --at-apply: 'max-w-50%';
+}
+.heti figure.img-md img {
+  --at-apply: 'max-w-75%';
+}
+.heti figure.img-lg img {
+  --at-apply: 'max-w-full';
+}
+
+/* Image Size Classes */
+.heti figure.img-sm img {
+  --at-apply: 'max-w-40%';
+}
+.heti figure.img-md img {
+  --at-apply: 'max-w-60%';
+}
+.heti figure.img-lg img {
+  --at-apply: 'max-w-80%';
+}
+.heti figure.img-25 img {
+  --at-apply: 'max-w-25%';
+}
+.heti figure.img-50 img {
+  --at-apply: 'max-w-50%';
+}
+.heti figure.img-75 img {
+  --at-apply: 'max-w-75%';
+}
+
 /* Code Blocks */
 .heti :where(pre) {
   --at-apply: 'overflow-auto uno-round-border px-4 py-3 bg-secondary/5!';

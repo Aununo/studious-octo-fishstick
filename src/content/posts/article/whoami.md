@@ -308,3 +308,19 @@ abbrlink: 'whoami'
 所以我再走在田埂上，再看脚下这片黄土，总觉得那里面藏着她的呼吸和体温。土原来也有情。
 
 从此以后，天大地大，我再没有一个可以喊“妈”的地方了。
+
+----------------------------------------------
+
+As I began to love myself
+
+I refused to go on living in the past
+
+and worry about the future.
+
+Now, I only live for the moment,
+
+where EVERYTHING is happening.
+
+Today I live each day, day by day,
+
+and I call it "PERFECTION".
