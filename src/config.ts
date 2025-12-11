@@ -4,7 +4,7 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Aununo\'s HomePage',
+    title: 'ideas',
     // site subtitle
     subtitle: 'Trust is divine.',
     // site description
@@ -12,7 +12,7 @@ export const themeConfig: ThemeConfig = {
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: false, // true, false
     // author name
-    author: '',
+    author: 'Aununo',
     // site url
     url: 'https://blog.aununo.xyz',
     // base path
@@ -58,10 +58,10 @@ export const themeConfig: ThemeConfig = {
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   global: {
     // default language
-    locale: 'zh', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
+    locale: 'en', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw', 'fr']
+    moreLocales: [], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw', 'fr']
     // font styles for post text
     fontStyle: 'sans', // sans, serif
     // date format for posts
@@ -78,7 +78,7 @@ export const themeConfig: ThemeConfig = {
   // COMMENT SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   comment: {
     // enable comment system
-    enabled: false, // true, false
+    enabled: true, // true, false
     // giscus
     // https://giscus.app/
     giscus: {
